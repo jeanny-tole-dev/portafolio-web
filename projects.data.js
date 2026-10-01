@@ -16,7 +16,7 @@ const projectsData = [
             { url: "img/JHAULARDESARROOLLO_3.png", label: "Laboratorio 3D & Detalle" }
         ],
         tags: ["Three.js", "JavaScript", "HTML5", "CSS3", "WebGL", "Role Admin", "E-commerce"],
-        liveUrl: "https://www.linkedin.com/in/tu-perfil",
+        liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
         repoUrl: "https://github.com/jeanny-tole-dev"
     },
@@ -30,7 +30,7 @@ const projectsData = [
             "img/LEARNING01.png"
         ],
         tags: ["JavaScript", "HTML5 Canvas", "CSS3", "UI/UX"],
-        liveUrl: "https://www.linkedin.com/in/tu-perfil",
+        liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
         repoUrl: "https://github.com/jeanny-tole-dev"
     },
@@ -54,7 +54,7 @@ const projectsData = [
             { url: "img/roladministradorheladeriadomenicodesrrollo.png", label: "Panel Admin 2" }
         ],
         tags: ["React", "Vite", "Supabase", "JavaScript", "Role Auth", "UI/UX"],
-        liveUrl: "https://www.linkedin.com/in/tu-perfil",
+        liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
         repoUrl: "https://github.com/jeanny-tole-dev/heladeria-react-supabase"
     },
@@ -73,7 +73,7 @@ const projectsData = [
             { url: "img/BIBLIOTECATIENEICOINOSINTERACTIVOS.png", label: "Iconos & Recursos Interactivos" }
         ],
         tags: ["JavaScript", "HTML5", "CSS3", "Iconos Interactivos", "UI/UX Infantil"],
-        liveUrl: "https://www.linkedin.com/in/tu-perfil",
+        liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
         repoUrl: "https://github.com/jeanny-tole-dev/biblioteca-virtual-infantil"
     },
@@ -91,7 +91,7 @@ const projectsData = [
             { url: "img/learningAI01.png", label: "Vista Proyecto Laravel SENA" }
         ],
         tags: ["Laravel", "PHP", "MySQL", "SENA", "HTML5", "CSS3"],
-        liveUrl: "https://www.linkedin.com/in/tu-perfil",
+        liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
         repoUrl: "https://github.com/jeanny-tole-dev/reto-claro-laravel"
     },
@@ -116,7 +116,7 @@ const projectsData = [
             { url: "img/Logotipo_circulo_belleza_iniciales_tipografico_negro.png", label: "Isotipo / Logotipo" }
         ],
         tags: ["Rediseño de Marca", "Empaques & Etiquetas", "Antes / Después", "Branding", "Illustrator", "Photoshop"],
-        liveUrl: "https://www.linkedin.com/in/tu-perfil",
+        liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
         repoUrl: ""
     },
@@ -137,7 +137,7 @@ const projectsData = [
             { url: "img/videojHaularredessociales.mp4", label: "Video Redes" }
         ],
         tags: ["Beacons.ai", "Fotografía IA", "Photoshop", "Illustrator", "Social Media", "Video"],
-        liveUrl: "https://www.linkedin.com/in/tu-perfil",
+        liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
         repoUrl: ""
     },
@@ -160,7 +160,7 @@ const projectsData = [
             { url: "img/deliciasconamorredessociales01.png", label: "Redes Sociales 2" }
         ],
         tags: ["WhatsApp Business", "Delivery & Menú", "Figma", "Canva", "Photoshop", "Identidad Visual"],
-        liveUrl: "https://www.linkedin.com/in/tu-perfil",
+        liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
         repoUrl: ""
     },
@@ -207,7 +207,7 @@ const projectsData = [
             { url: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISENO_4.png", label: "Campaña Gráfica 4" }
         ],
         tags: ["Diseño Gráfico", "Campaña Publicitaria", "Positivo S+", "Photoshop", "Illustrator"],
-        liveUrl: "https://www.linkedin.com/in/tu-perfil",
+        liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
         repoUrl: ""
     },
@@ -236,7 +236,7 @@ const projectsData = [
             { url: "img/videofindeanoadvisor.mp4", label: "Video Fin de Año" }
         ],
         tags: ["Branding", "Comunicación Interna", "Social Media", "Video", "Illustrator", "Photoshop"],
-        liveUrl: "https://www.linkedin.com/in/tu-perfil",
+        liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
         repoUrl: ""
     }
