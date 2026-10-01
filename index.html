@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeanny Paola Tole | Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. SECCIÓN INICIO (Portada con métricas, foto y carrusel infinito automático) -->
+    <section id="inicio">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1 class="hero-title-main">DISEÑADORA</h1>
+                <h1 class="hero-title-sub">FULLSTACK</h1>
+                
+                <p class="hero-subtitle">Hola, soy Jeanny Paola Tole Oliveros</p>
+                <p class="hero-desc">Fusionando la creatividad publicitaria y el diseño visual con el desarrollo web moderno.</p>
+                
+                <!-- Métricas profesionales -->
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <span class="metric-number">+3</span>
+                        <span class="metric-label">AÑOS DE EXPERIENCIA</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">10+</span>
+                        <span class="metric-label">PROYECTOS COMPLETADOS</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">100%</span>
+                        <span class="metric-label">ENFOQUE CREATIVO</span>
+                    </div>
+                </div>
+
+                <!-- Botones de Acción Rápida -->
+                <div class="hero-cta-group">
+                    <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
+                    <a href="#contacto" class="btn-secondary">Contactar</a>
+                    <span class="availability-badge">
+                        <span class="pulse-dot"></span> Disponible
+                    </span>
+                </div>
+            </div>
+            
+            <div class="hero-image-box">
+                <div class="orange-shape"></div>
+                <div class="secondary-shape"></div> 
+                <img src="img/portada.png" alt="Jeanny Paola Tole Oliveros">         
+           </div>
+        </div>
+
+        <!-- CARRUSEL INFINITO AUTOMÁTICO DE LA PORTADA (Galería visual interactiva) -->
+        <div class="hero-auto-slider">
+            <div class="slider-track">
+                
+                <!-- BLOQUE 1 (Proyectos Originales) -->
+                <a href="#proyectos" class="slider-card" title="Ver Jhaular Joyería en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/JHAULARDESARROOLLO (1).png" alt="Jhaular Joyería" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Jhaular Joyería</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag">Desarrollo Web</span>
+                        <h4 class="slider-card-title">Jhaular Joyería</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Adaptación de Juegos de Learning en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/learningAI01.png" alt="Juegos de Learning" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Juegos Learning</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag">Desarrollo Web</span>
+                        <h4 class="slider-card-title">Juegos Learning</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Heladería DOMENICO en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/logoheladeriadomenico.png" alt="Heladería DOMENICO" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Heladería DOMENICO</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag">Desarrollo Web</span>
+                        <h4 class="slider-card-title">Heladería DOMENICO</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Biblioteca Virtual Infantil en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/BIBLIOTECA (1).png" alt="Biblioteca Virtual Infantil" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Biblioteca Virtual</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag">Desarrollo Web</span>
+                        <h4 class="slider-card-title">Biblioteca Virtual</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Delicias con Amor en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/deliciasconamordespues.png" alt="Delicias con Amor" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Delicias con Amor</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag tag-design">Diseño & Branding</span>
+                        <h4 class="slider-card-title">Delicias con Amor</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Aura Nativa en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/IDENTIDADDEMARCA AURANATIVA.png" alt="Aura Nativa" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Aura Nativa</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag tag-design">Diseño & Branding</span>
+                        <h4 class="slider-card-title">Aura Nativa</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Advisor Staff en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/bIENBENIDAADVISOR.png" alt="Advisor Staff" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Advisor Staff</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag tag-design">Diseño & Branding</span>
+                        <h4 class="slider-card-title">Advisor Staff</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Distriverano en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/DISEÑONUEVAETIQUETASDISTRIVERANO.png" alt="Distriverano Condimentos" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Distriverano</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag tag-design">Diseño & Branding</span>
+                        <h4 class="slider-card-title">Distriverano</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Lanzamiento LearningAI en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISEÑO (5).png" alt="Lanzamiento LearningAI Positivo S+" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">LearningAI</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag tag-design">Diseño & Branding</span>
+                        <h4 class="slider-card-title">LearningAI (Positivo S+)</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- BLOQUE 2 (Duplicados para el bucle infinito) -->
+                <a href="#proyectos" class="slider-card" title="Ver Jhaular Joyería en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/JHAULARDESARROOLLO (1).png" alt="Jhaular Joyería" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Jhaular Joyería</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag">Desarrollo Web</span>
+                        <h4 class="slider-card-title">Jhaular Joyería</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Adaptación de Juegos de Learning en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/learningAI01.png" alt="Juegos de Learning" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Juegos Learning</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag">Desarrollo Web</span>
+                        <h4 class="slider-card-title">Juegos Learning</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Heladería DOMENICO en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/logoheladeriadomenico.png" alt="Heladería DOMENICO" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Heladería DOMENICO</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag">Desarrollo Web</span>
+                        <h4 class="slider-card-title">Heladería DOMENICO</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Biblioteca Virtual Infantil en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/BIBLIOTECA (1).png" alt="Biblioteca Virtual Infantil" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Biblioteca Virtual</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag">Desarrollo Web</span>
+                        <h4 class="slider-card-title">Biblioteca Virtual</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Delicias con Amor en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/deliciasconamordespues.png" alt="Delicias con Amor" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Delicias con Amor</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag tag-design">Diseño & Branding</span>
+                        <h4 class="slider-card-title">Delicias con Amor</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Aura Nativa en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/IDENTIDADDEMARCA AURANATIVA.png" alt="Aura Nativa" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Aura Nativa</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag tag-design">Diseño & Branding</span>
+                        <h4 class="slider-card-title">Aura Nativa</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Advisor Staff en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/bIENBENIDAADVISOR.png" alt="Advisor Staff" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Advisor Staff</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag tag-design">Diseño & Branding</span>
+                        <h4 class="slider-card-title">Advisor Staff</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Distriverano en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/DISEÑONUEVAETIQUETASDISTRIVERANO.png" alt="Distriverano Condimentos" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">Distriverano</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag tag-design">Diseño & Branding</span>
+                        <h4 class="slider-card-title">Distriverano</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="#proyectos" class="slider-card" title="Ver Lanzamiento LearningAI en Proyectos">
+                    <div class="card-image-preview">
+                        <img src="img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISEÑO (5).png" alt="Lanzamiento LearningAI Positivo S+" onerror="this.classList.add('img-error'); this.parentElement.classList.add('image-fallback');">
+                        <div class="fallback-overlay">
+                            <span class="fallback-title">LearningAI</span>
+                        </div>
+                    </div>
+                    <div class="slider-card-footer">
+                        <span class="slider-card-tag tag-design">Diseño & Branding</span>
+                        <h4 class="slider-card-title">LearningAI (Positivo S+)</h4>
+                    </div>
+                    <div class="slider-card-hover-overlay">
+                        <span>Ver Proyecto &rarr;</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!--2. Sección unificada de Proyectos y Skills -->
+    <section id="proyectos" class="projects-section">
+        <div class="projects-container">
+            
+            <!-- Cabecera limpia a la izquierda -->
+            <div class="projects-header-editorial">
+                <h2 class="projects-title-main">MIS PROYECTOS</h2>
+                <p>Una selección de mis trabajos en diseño visual, branding y desarrollo web interactivo.</p>
+            </div>
+
+            <!-- LAYOUT EN 2 COLUMNAS (DISEÑO IZQUIERDA | DESARROLLO DERECHA) -->
+            <div class="projects-two-columns-layout">
+                
+                <!-- COLUMNA IZQUIERDA: Diseño & Branding -->
+                <div class="project-column-side">
+                    <h3 class="category-section-title">Diseño & Branding</h3>
+                    <div class="category-loop-carousel" id="design-grid-container">
+                        <!-- Las tarjetas de diseño se inyectan aquí -->
+                    </div>
+                    <!-- CONTROLES INFERIORES DE NAVEGACIÓN -->
+                    <div class="category-carousel-controls" data-target="design-grid-container">
+                        <button class="cat-nav-btn prev" data-dir="prev" title="Proyecto anterior">&lsaquo;</button>
+                        <span class="cat-page-indicator" id="design-indicator">1 / 3</span>
+                        <button class="cat-nav-btn next" data-dir="next" title="Siguiente proyecto">&rsaquo;</button>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: Desarrollo & Frontend -->
+                <div class="project-column-side">
+                    <h3 class="category-section-title">Desarrollo & Frontend</h3>
+                    <div class="category-loop-carousel" id="frontend-grid-container">
+                        <!-- Las tarjetas de frontend se inyectan aquí -->
+                    </div>
+                    <!-- CONTROLES INFERIORES DE NAVEGACIÓN -->
+                    <div class="category-carousel-controls" data-target="frontend-grid-container">
+                        <button class="cat-nav-btn prev" data-dir="prev" title="Proyecto anterior">&lsaquo;</button>
+                        <span class="cat-page-indicator" id="frontend-indicator">1 / 4</span>
+                        <button class="cat-nav-btn next" data-dir="next" title="Siguiente proyecto">&rsaquo;</button>
+                    </div>
+                </div>
+
+            </div> <!-- FIN de .projects-two-columns-layout -->
+
+        </div> <!-- FIN de .projects-container -->
+    </section>
+
+
+    <!-- 3. SECCIÓN CERTIFICADOS Y HABILIDADES -->
+    <section id="certificados" class="certificados-section">
+        <div class="certificados-container">
+            <h2 class="section-title">Certificados y Validación Académica</h2>
+            <ul class="certificados-list">
+                <li>Certificado de Tecnóloga en Desarrollo Publicitario - SENA</li>
+                <li>Curso de Desarrollo Web Frontend – Universidad de los Andes / Colsubsidio</li>
+                <li>Curso de Diseño De Experiencias Digitales Con IA Colsubsidio</li>
+                <li>Certificado de Pasantía Técnica – Positivo S+ / Algar Tecnología</li>
+            </ul>
+
+            <!-- BLOQUE DE HABILIDADES Y TECNOLOGÍAS -->
+            <div class="skills-showcase-block">
+                <h3 class="category-section-title">Habilidades & Tecnologías</h3>
+                <div class="skills-grid-container">
+                    <div class="skill-category-card">
+                        <h4>Diseño & Multimedia</h4>
+                        <div class="skill-tags">
+                            <span class="tech-badge">Figma</span>
+                            <span class="tech-badge">Adobe Illustrator</span>
+                            <span class="tech-badge">Adobe Photoshop</span>
+                            <span class="tech-badge">Canva</span>
+                            <span class="tech-badge">UI/UX & Branding</span>
+                        </div>
+                    </div>
+                    <div class="skill-category-card">
+                        <h4>Desarrollo Web</h4>
+                        <div class="skill-tags">
+                            <span class="tech-badge">HTML5 / CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Vite</span>
+                            <span class="tech-badge">Supabase</span>
+                        </div>
+                    </div>
+                </div> <!-- FIN de .skills-grid-container -->
+            </div> <!-- FIN de .skills-showcase-block -->
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN PROPUESTA DE VALOR (ESTILO EDITORIAL MINIMALISTA & FLUIDO) -->
+    <section id="valor-corporativo" class="corporate-value-section">
+        <div class="corporate-value-container">
+            
+            <!-- Cabecera limpia y sofisticada -->
+            <div class="projects-header-editorial">
+                <span class="editorial-tag">Propuesta de Valor</span>
+                <h2 class="projects-title-main">IMPACTO EN TU EQUIPO</h2>
+                <p class="corporate-minimalist-desc">
+                    Perfil híbrido que integra <strong>Dirección de Arte</strong>, <strong>Experiencia de Usuario (UI/UX)</strong> y <strong>Desarrollo Frontend (React / Three.js)</strong>. Elimino la brecha entre diseño y código, reduzco tiempos de entrega y potencio la conversión de tu producto digital.
+                </p>
+            </div>
+
+            <!-- CUADRÍCULA DE VALOR EDITORIAL EN 3 COLUMNAS LIMPIAS -->
+            <div class="minimalist-value-grid">
+                
+                <div class="minimalist-value-card">
+                    <span class="value-card-num">01</span>
+                    <h3>Diseño & Código Sin Brechas</h3>
+                    <p>Diseño interfaces intuitivas en Figma y las construyo directamente en código (React / JS) sin intermediarios ni pérdida de fidelidad estética.</p>
+                </div>
+
+                <div class="minimalist-value-card">
+                    <span class="value-card-num">02</span>
+                    <h3>Enfoque en Conversión & ROI</h3>
+                    <p>Estrategias visuales y técnicas orientadas a métricas reales de negocio, optimizando el flujo de usuario para incrementar ventas e interacción.</p>
+                </div>
+
+                <div class="minimalist-value-card">
+                    <span class="value-card-num">03</span>
+                    <h3>Innovación 3D & Tecnológica</h3>
+                    <p>Integración de experiencias inmersivas con Three.js / WebGL y procesos creativos asistidos con IA para diferenciar tu producto en el mercado.</p>
+                </div>
+
+            </div> <!-- FIN de .minimalist-value-grid -->
+
+            <!-- ROLES DE ENFOQUE PROFESIONAL -->
+            <div class="minimalist-roles-bar">
+                <span class="roles-bar-label">ROLES OBJETIVO:</span>
+                <div class="roles-badges-flex">
+                    <span class="role-badge-minimal">Desarrolladora Frontend</span>
+                    <span class="role-badge-minimal">Diseñadora UX / UI</span>
+                    <span class="role-badge-minimal">Especialista en Branding</span>
+                    <span class="role-badge-minimal">Creative Tech & IA</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. SECCIÓN CONTACTO -->
+    <section id="contacto" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <span class="editorial-tag">Conectemos</span>
+                <h2 class="contact-title">¡HABLEMOS DE TU PRÓXIMO PROYECTO!</h2>
+                <p class="contact-lead">
+                    Estoy disponible para incorporarme a equipos de alto rendimiento, asumir retos en desarrollo frontend, diseño UI/UX o proyectos de branding de impacto.
+                </p>
+            </div>
+
+            <!-- TARJETAS Y ENLACES DIRECTOS DE CONTACTO -->
+            <div class="contact-cards-grid">
+                
+                <a href="mailto:jeapaola@gmail.com" class="contact-card" title="Enviar correo electrónico">
+                    <div class="contact-card-icon">📧</div>
+                    <div class="contact-card-text">
+                        <span class="contact-card-label">Correo Electrónico</span>
+                        <span class="contact-card-value">jeapaola@gmail.com</span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/573128082149" target="_blank" class="contact-card" title="Hablar por WhatsApp">
+                    <div class="contact-card-icon">📱</div>
+                    <div class="contact-card-text">
+                        <span class="contact-card-label">WhatsApp Directo</span>
+                        <span class="contact-card-value">Chat de WhatsApp &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" class="contact-card linkedin-card" title="Ver Perfil Profesional en LinkedIn">
+                    <div class="contact-card-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="#0A66C2"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2z"/></svg>
+                    </div>
+                    <div class="contact-card-text">
+                        <span class="contact-card-label">Perfil Profesional</span>
+                        <span class="contact-card-value">LinkedIn &rarr;</span>
+                    </div>
+                </a>
+
+                <div class="contact-card location-card">
+                    <div class="contact-card-icon">📍</div>
+                    <div class="contact-card-text">
+                        <span class="contact-card-label">Ubicación</span>
+                        <span class="contact-card-value">Madrid, Cundinamarca (Colombia)</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MENÚ FLOTANTE DE NAVEGACIÓN LATERAL -->
+    <nav class="nav-menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#certificados">Certificados</a>
+        <a href="#valor-corporativo">Mi Valor</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- SCRIPTS DE AUTOMATIZACIÓN -->
+    <script src="projects.data.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

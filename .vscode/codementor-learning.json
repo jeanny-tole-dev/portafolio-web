@@ -1,0 +1,58 @@
+{
+  "CSS-003": {
+    "occurrences": 186,
+    "confidence": 1,
+    "mastered_explicitly": false,
+    "first_seen": "2026-09-28T23:47:43.485Z",
+    "last_seen": "2026-10-01T14:36:43.870Z"
+  },
+  "CSS-001": {
+    "occurrences": 285,
+    "confidence": 1,
+    "mastered_explicitly": false,
+    "first_seen": "2026-09-29T11:45:53.259Z",
+    "last_seen": "2026-10-01T14:36:43.867Z"
+  },
+  "SEC-004": {
+    "occurrences": 40,
+    "confidence": 1,
+    "mastered_explicitly": false,
+    "first_seen": "2026-09-29T13:00:18.348Z",
+    "last_seen": "2026-10-01T22:03:11.790Z"
+  },
+  "REACT-003": {
+    "occurrences": 64,
+    "confidence": 1,
+    "mastered_explicitly": false,
+    "first_seen": "2026-09-29T14:09:51.472Z",
+    "last_seen": "2026-10-01T22:03:11.790Z"
+  },
+  "CC-004": {
+    "occurrences": 60,
+    "confidence": 1,
+    "mastered_explicitly": false,
+    "first_seen": "2026-09-29T14:09:51.503Z",
+    "last_seen": "2026-10-01T22:03:11.820Z"
+  },
+  "JS-001": {
+    "occurrences": 30,
+    "confidence": 1,
+    "mastered_explicitly": false,
+    "first_seen": "2026-09-29T14:59:24.200Z",
+    "last_seen": "2026-10-01T22:03:11.805Z"
+  },
+  "HTML-001": {
+    "occurrences": 684,
+    "confidence": 1,
+    "mastered_explicitly": false,
+    "first_seen": "2026-09-29T16:08:14.129Z",
+    "last_seen": "2026-10-01T21:57:16.840Z"
+  },
+  "HTML-002": {
+    "occurrences": 9,
+    "confidence": 1,
+    "mastered_explicitly": false,
+    "first_seen": "2026-09-29T19:04:11.769Z",
+    "last_seen": "2026-09-29T19:13:10.709Z"
+  }
+}
