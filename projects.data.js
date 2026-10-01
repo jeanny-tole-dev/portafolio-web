@@ -9,11 +9,11 @@ const projectsData = [
             "Panel de Administración & Control por Rol",
             "Catálogo Dinámico & Plataforma E-Commerce"
         ],
-        image: "img/JHAULARDESARROOLLO (1).png",
+        image: "img/JHAULARDESARROOLLO_1.png",
         images: [
-            { url: "img/JHAULARDESARROOLLO (1).png", label: "Vista Principal Web & Catálogo" },
-            { url: "img/JHAULARDESARROOLLO (2).png", label: "Catálogo & Productos" },
-            { url: "img/JHAULARDESARROOLLO (3).png", label: "Laboratorio 3D & Detalle" }
+            { url: "img/JHAULARDESARROOLLO_1.png", label: "Vista Principal Web & Catálogo" },
+            { url: "img/JHAULARDESARROOLLO_2.png", label: "Catálogo & Productos" },
+            { url: "img/JHAULARDESARROOLLO_3.png", label: "Laboratorio 3D & Detalle" }
         ],
         tags: ["Three.js", "JavaScript", "HTML5", "CSS3", "WebGL", "Role Admin", "E-commerce"],
         liveUrl: "https://www.linkedin.com/in/tu-perfil",
@@ -47,9 +47,9 @@ const projectsData = [
         images: [
             { url: "img/logoheladeriadomenico.png", label: "Logo Domenico" },
             { url: "img/rolclienteheladeriadomenicodesarrollo.png", label: "Rol Cliente 1" },
-            { url: "img/rolclienteheladeriadomenicodesarrollo (2).png", label: "Rol Cliente 2" },
+            { url: "img/rolclienteheladeriadomenicodesarrollo_2.png", label: "Rol Cliente 2" },
             { url: "img/rolempleadoheladeriadomenicodesarrollo.png", label: "Rol Empleado 1" },
-            { url: "img/rolempleadoheladeriadomenicodesarrollo (2).png", label: "Rol Empleado 2" },
+            { url: "img/rolempleadoheladeriadomenicodesarrollo_2.png", label: "Rol Empleado 2" },
             { url: "img/roladministradorheladeriadomenicodesarrollo.png", label: "Panel Admin 1" },
             { url: "img/roladministradorheladeriadomenicodesrrollo.png", label: "Panel Admin 2" }
         ],
@@ -67,9 +67,9 @@ const projectsData = [
             "Iconografía e Interacciones Dinámicas",
             "Maquetación Frontend Fluida"
         ],
-        image: "img/BIBLIOTECA (1).png",
+        image: "img/BIBLIOTECA_1.png",
         images: [
-            { url: "img/BIBLIOTECA (1).png", label: "Vista Biblioteca Virtual" },
+            { url: "img/BIBLIOTECA_1.png", label: "Vista Biblioteca Virtual" },
             { url: "img/BIBLIOTECATIENEICOINOSINTERACTIVOS.png", label: "Iconos & Recursos Interactivos" }
         ],
         tags: ["JavaScript", "HTML5", "CSS3", "Iconos Interactivos", "UI/UX Infantil"],
@@ -106,14 +106,14 @@ const projectsData = [
             "Nuevas Etiquetas (Evolución Antes / Después)",
             "Propuestas de Empaque & Catálogo"
         ],
-        image: "img/DISEÑONUEVAETIQUETASDISTRIVERANO.png",
+        image: "img/DISENONUEVAETIQUETASDISTRIVERANO.png",
         images: [
-            { url: "img/DISEÑONUEVAETIQUETASDISTRIVERANO.png", label: "Nuevas Etiquetas (Después)" },
+            { url: "img/DISENONUEVAETIQUETASDISTRIVERANO.png", label: "Nuevas Etiquetas (Después)" },
             { url: "img/ETIQUETASANTESDISTRIVERANO.png", label: "Etiquetas Originales (Antes)" },
             { url: "img/20.png", label: "Nueva Propuesta de Marca" },
             { url: "img/18.png", label: "Catálogo & Empaques" },
             { url: "img/17.png", label: "Detalle de Rediseño" },
-            { url: "img/Logotipo circulo belleza iniciales tipográfico negro.png", label: "Isotipo / Logotipo" }
+            { url: "img/Logotipo_circulo_belleza_iniciales_tipografico_negro.png", label: "Isotipo / Logotipo" }
         ],
         tags: ["Rediseño de Marca", "Empaques & Etiquetas", "Antes / Después", "Branding", "Illustrator", "Photoshop"],
         liveUrl: "https://www.linkedin.com/in/tu-perfil",
@@ -129,11 +129,11 @@ const projectsData = [
             "Retoque Fotográfico con IA (Producto Real Intacto)",
             "Producción de Video Publicitario & Social Media"
         ],
-        image: "img/diseñodefotosapoyadasconAITIPOECOMERCEjhaular.png",
+        image: "img/disenodefotosapoyadasconAITIPOECOMERCEjhaular.png",
         images: [
-            { url: "img/diseñodefotosapoyadasconAITIPOECOMERCEjhaular.png", label: "Fotografía E-Commerce IA" },
+            { url: "img/disenodefotosapoyadasconAITIPOECOMERCEjhaular.png", label: "Fotografía E-Commerce IA" },
             { url: "img/CREACIONDECATALOGOENBEACONS.AIJHAULAR.mp4", label: "Catálogo Beacons.ai & Retoque IA" },
-            { url: "img/diseñologojhaular.png", label: "Logo Jhaular" },
+            { url: "img/disenologojhaular.png", label: "Logo Jhaular" },
             { url: "img/videojHaularredessociales.mp4", label: "Video Redes" }
         ],
         tags: ["Beacons.ai", "Fotografía IA", "Photoshop", "Illustrator", "Social Media", "Video"],
@@ -173,16 +173,16 @@ const projectsData = [
             "Diseño de Etiquetas & Empaques",
             "Catálogos en Beacons.ai & Drive (PDF)"
         ],
-        image: "img/IDENTIDADDEMARCA AURANATIVA.png",
+        image: "img/IDENTIDADDEMARCA_AURANATIVA.png",
         images: [
-            { url: "img/IDENTIDADDEMARCA AURANATIVA.png", label: "Visual de Marca" },
-            { url: "img/ETIQUETASVELASAURANATIVA (1).png", label: "Etiquetas Velas Soya 1" },
-            { url: "img/ETIQUETASVELASAURANATIVA (2).png", label: "Etiquetas Velas Soya 2" },
-            { url: "img/ETIQUETASVELASAURANATIVA (3).png", label: "Etiquetas Velas Soya 3" },
-            { url: "img/ETIQUETASVELASAURANATIVA (4).png", label: "Etiquetas Velas Soya 4" },
-            { url: "img/AURANATIVA (11).png", label: "Identidad & Logotipo" },
-            { url: "img/AURANATIVA (2).png", label: "Guía Visual & Colores" },
-            { url: "img/AURANATIVA (5).png", label: "Branding & Layout" }
+            { url: "img/IDENTIDADDEMARCA_AURANATIVA.png", label: "Visual de Marca" },
+            { url: "img/ETIQUETASVELASAURANATIVA_1.png", label: "Etiquetas Velas Soya 1" },
+            { url: "img/ETIQUETASVELASAURANATIVA_2.png", label: "Etiquetas Velas Soya 2" },
+            { url: "img/ETIQUETASVELASAURANATIVA_3.png", label: "Etiquetas Velas Soya 3" },
+            { url: "img/ETIQUETASVELASAURANATIVA_4.png", label: "Etiquetas Velas Soya 4" },
+            { url: "img/AURANATIVA_11.png", label: "Identidad & Logotipo" },
+            { url: "img/AURANATIVA_2.png", label: "Guía Visual & Colores" },
+            { url: "img/AURANATIVA_5.png", label: "Branding & Layout" }
         ],
         tags: ["Velas de Soya", "Branding", "Etiquetas & Empaques", "Beacons.ai", "Catálogo Drive PDF", "Illustrator"],
         liveUrl: "https://beacons.ai/auranativa",
@@ -198,13 +198,13 @@ const projectsData = [
             "Diseño Gráfico Corporativo Positivo S+",
             "Material de Difusión LearningAI"
         ],
-        image: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISEÑO (5).png",
+        image: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISENO_5.png",
         images: [
-            { url: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISEÑO (5).png", label: "Lanzamiento Principal" },
-            { url: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISEÑO (1).png", label: "Campaña Gráfica 1" },
-            { url: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISEÑO (2).png", label: "Campaña Gráfica 2" },
-            { url: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISEÑO (3).png", label: "Campaña Gráfica 3" },
-            { url: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISEÑO (4).png", label: "Campaña Gráfica 4" }
+            { url: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISENO_5.png", label: "Lanzamiento Principal" },
+            { url: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISENO_1.png", label: "Campaña Gráfica 1" },
+            { url: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISENO_2.png", label: "Campaña Gráfica 2" },
+            { url: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISENO_3.png", label: "Campaña Gráfica 3" },
+            { url: "img/PIEZASGRAFICASLAMZAMIENTOLEARNINGDISENO_4.png", label: "Campaña Gráfica 4" }
         ],
         tags: ["Diseño Gráfico", "Campaña Publicitaria", "Positivo S+", "Photoshop", "Illustrator"],
         liveUrl: "https://www.linkedin.com/in/tu-perfil",
@@ -225,15 +225,15 @@ const projectsData = [
         image: "img/bIENBENIDAADVISOR.png",
         images: [
             { url: "img/bIENBENIDAADVISOR.png", label: "Bienvenida Empleados" },
-            { url: "img/DISEÑOTAJETABONOADVISOR.png", label: "Tarjeta Fin de Año / Bono" },
-            { url: "img/DISEÑOCARNETADVISOR.png", label: "Carnet Corporativo" },
-            { url: "img/diseñodefirmacorreoelectronicoadvisor.png", label: "Firma de Correo" },
-            { url: "img/TARIFARIOH&HADVISOR (1).pdf.png", label: "Tarifario H&H" },
-            { url: "img/OperaFácilcreacionlogodiseñoadvisor (1).png", label: "Logo OperaFácil" },
-            { url: "img/OperaFácilcreaciondiseñoadvisor (2).png", label: "Rediseño H&H" },
+            { url: "img/DISENOTAJETABONOADVISOR.png", label: "Tarjeta Fin de Año / Bono" },
+            { url: "img/DISENOCARNETADVISOR.png", label: "Carnet Corporativo" },
+            { url: "img/disenodefirmacorreoelectronicoadvisor.png", label: "Firma de Correo" },
+            { url: "img/TARIFARIOH&HADVISOR_1.pdf.png", label: "Tarifario H&H" },
+            { url: "img/OperaFacilcreacionlogodisenoadvisor_1.png", label: "Logo OperaFácil" },
+            { url: "img/OperaFacilcreaciondisenoadvisor_2.png", label: "Rediseño H&H" },
             { url: "img/comunicacioninternaadvisor.jpg", label: "Comunicación Interna" },
             { url: "img/videoadvisorredessociales.mp4", label: "Video Redes Social" },
-            { url: "img/videofindeañoadvisor.mp4", label: "Video Fin de Año" }
+            { url: "img/videofindeanoadvisor.mp4", label: "Video Fin de Año" }
         ],
         tags: ["Branding", "Comunicación Interna", "Social Media", "Video", "Illustrator", "Photoshop"],
         liveUrl: "https://www.linkedin.com/in/tu-perfil",
