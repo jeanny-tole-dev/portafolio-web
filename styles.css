@@ -1964,3 +1964,248 @@ img.img-error {
         justify-content: center;
     }
 }
+
+/* ==========================================================================
+   BOTÓN DE ALTERNANCIA DE TEMA EN NAV (THEME TOGGLE)
+   ========================================================================== */
+
+.theme-toggle-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.06);
+    color: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.15rem;
+    transition: all 0.3s ease;
+    outline: none;
+    margin-bottom: 2px;
+}
+
+.theme-toggle-btn:hover {
+    border-color: #ff9e64;
+    background: rgba(255, 158, 100, 0.15);
+    transform: scale(1.1);
+}
+
+.theme-icon {
+    display: none;
+    line-height: 1;
+}
+
+/* En Modo Oscuro (por defecto), muestra el Sol ☀️ para cambiar a Claro */
+body:not(.light-theme) .theme-icon.sun {
+    display: inline-block;
+}
+
+/* En Modo Claro (.light-theme), muestra la Luna 🌙 para cambiar a Oscuro */
+body.light-theme .theme-icon.moon {
+    display: inline-block;
+}
+
+.nav-divider {
+    width: 20px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 2px 0 6px 0;
+}
+
+/* ==========================================================================
+   ESTILOS GENERALES Y COMPONENTES PARA MODO CLARO (LIGHT THEME)
+   ========================================================================== */
+
+body.light-theme {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+body.light-theme section {
+    background-color: #f8fafc;
+}
+
+body.light-theme #proyectos,
+body.light-theme #github-actividad,
+body.light-theme #valor-corporativo {
+    background-color: #f1f5f9;
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme .hero-title-sub,
+body.light-theme .github-username,
+body.light-theme .slider-card-title,
+body.light-theme .minimalist-value-card h3 {
+    color: #0f172a;
+}
+
+body.light-theme .hero-desc,
+body.light-theme .corporate-minimalist-desc,
+body.light-theme .contact-lead,
+body.light-theme p {
+    color: #475569;
+}
+
+body.light-theme .metric-label {
+    color: #64748b;
+}
+
+body.light-theme .metrics-grid {
+    border-top-color: #cbd5e1;
+}
+
+body.light-theme .nav-menu {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .nav-menu a {
+    color: #475569;
+}
+
+body.light-theme .nav-menu a:hover {
+    color: #ea580c;
+    border-color: #ea580c;
+    background: rgba(234, 88, 12, 0.08);
+}
+
+body.light-theme .theme-toggle-btn {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}
+
+body.light-theme .theme-toggle-btn:hover {
+    border-color: #ea580c;
+    background: rgba(234, 88, 12, 0.1);
+}
+
+body.light-theme .nav-divider {
+    background: #e2e8f0;
+}
+
+body.light-theme .btn-secondary,
+body.light-theme .btn-github {
+    background: #ffffff;
+    color: #0f172a;
+    border-color: #cbd5e1;
+}
+
+body.light-theme .btn-secondary:hover,
+body.light-theme .btn-github:hover {
+    border-color: #ea580c;
+    color: #ea580c;
+    background: rgba(234, 88, 12, 0.05);
+}
+
+body.light-theme .slider-card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+body.light-theme .flip-card-front,
+body.light-theme .flip-card-back {
+    background: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+body.light-theme .flip-card-back h3 {
+    color: #0f172a !important;
+}
+
+body.light-theme .flip-card-back p {
+    color: #334155 !important;
+}
+
+body.light-theme .project-impact-badge {
+    background: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+    color: #1e293b !important;
+}
+
+body.light-theme .tech-badge {
+    background: #f1f5f9 !important;
+    border-color: #cbd5e1 !important;
+    color: #334155 !important;
+}
+
+body.light-theme .skill-category-card,
+body.light-theme .cert-list,
+body.light-theme #certificados ul {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .cert-list li,
+body.light-theme #certificados li {
+    color: #334155;
+    border-bottom-color: #f1f5f9;
+}
+
+body.light-theme .minimalist-value-card {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .minimalist-value-card p {
+    color: #475569;
+}
+
+body.light-theme .role-badge-minimal {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    color: #334155;
+}
+
+body.light-theme .github-profile-card,
+body.light-theme .github-repo-card {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .github-repo-title {
+    color: #0f172a;
+}
+
+body.light-theme .github-repo-desc {
+    color: #475569;
+}
+
+body.light-theme .github-repo-footer {
+    border-top-color: #f1f5f9;
+}
+
+body.light-theme .meta-pill {
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+    color: #334155;
+}
+
+body.light-theme .contact-card {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .contact-card-value {
+    color: #0f172a;
+}
+
+body.light-theme .contact-card-label {
+    color: #64748b;
+}
+
+body.light-theme .contact-card.github-card svg {
+    fill: #0f172a;
+}
