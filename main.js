@@ -321,6 +321,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const fallbackRepos = [
             {
+                name: "jhaular-joyeria",
+                description: "Plataforma e-commerce y laboratorio 3D interactivo en Three.js + React + Supabase para Jhaular Joyería.",
+                language: "TypeScript / React",
+                stargazers_count: 0,
+                html_url: "https://github.com/jeanny-tole-dev/jhaular-joyeria",
+                updated_at: "2026-10-02T14:54:00Z"
+            },
+            {
                 name: "heladeria-react-supabase",
                 description: "Taller de Heladería e-commerce interactivo en React + Vite + Supabase. Autenticación y roles de usuario.",
                 language: "JavaScript",

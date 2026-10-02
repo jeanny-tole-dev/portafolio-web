@@ -18,7 +18,7 @@ const projectsData = [
         tags: ["Three.js", "JavaScript", "HTML5", "CSS3", "WebGL", "Role Admin", "E-commerce"],
         liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
-        repoUrl: "https://github.com/jeanny-tole-dev"
+        repoUrl: "https://github.com/jeanny-tole-dev/jhaular-joyeria"
     },
     {
         title: "Adaptación de Juegos de Learning",
