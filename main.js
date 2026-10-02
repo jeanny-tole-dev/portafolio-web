@@ -475,6 +475,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (reposCountBadge && userData.public_repos !== undefined) {
                     reposCountBadge.textContent = userData.public_repos;
                 }
+                const avatarImg = document.getElementById("github-avatar");
+                if (avatarImg && userData.avatar_url) {
+                    avatarImg.src = userData.avatar_url;
+                }
             }
 
             if (reposRes.ok) {
