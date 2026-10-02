@@ -1,4 +1,4 @@
-# 🌟 Portafolio Web Profesional - Jeanny Paola Tole
+# Portafolio Web Profesional - Jeanny Paola Tole
 
 Bienvenido al repositorio oficial del **Portafolio Web Profesional** de **Jeanny Paola Tole Oliveros** — *Diseñadora Visual & Desarrolladora Web Fullstack*.
 
