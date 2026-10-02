@@ -1661,7 +1661,11 @@ img.img-error {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1rem;
+}
+
+.github-container .projects-header-editorial {
+    margin-bottom: 0.5rem;
 }
 
 .github-profile-card {
