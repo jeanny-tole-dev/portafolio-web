@@ -2134,8 +2134,9 @@ body.light-theme .projects-title-main {
 
 body.light-theme .editorial-tag {
     color: #c026d3 !important;
-    background: rgba(192, 38, 211, 0.08) !important;
-    border-color: rgba(192, 38, 211, 0.2) !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
 }
 
 body.light-theme .projects-header-editorial p,
