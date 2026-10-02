@@ -321,6 +321,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const fallbackRepos = [
             {
+                name: "bradescard-training",
+                description: "Módulos de juegos de entrenamiento interactivo adaptados para la plataforma LearningAI (Positivo S+ / Algar Tech).",
+                language: "JavaScript / React",
+                stargazers_count: 0,
+                html_url: "https://github.com/jeanny-tole-dev/bradescard-training",
+                updated_at: "2026-10-02T15:19:00Z"
+            },
+            {
                 name: "jhaular-joyeria",
                 description: "Plataforma e-commerce y laboratorio 3D interactivo en Three.js + React + Supabase para Jhaular Joyería.",
                 language: "TypeScript / React",

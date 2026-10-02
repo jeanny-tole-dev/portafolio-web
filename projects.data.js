@@ -32,7 +32,7 @@ const projectsData = [
         tags: ["JavaScript", "HTML5 Canvas", "CSS3", "UI/UX"],
         liveUrl: "https://www.linkedin.com/in/jeanny-paola-tole-oliveros-6a95a676",
         liveLabel: "Ver en LinkedIn &rarr;",
-        repoUrl: "https://github.com/jeanny-tole-dev"
+        repoUrl: "https://github.com/jeanny-tole-dev/bradescard-training"
     },
     {
         title: "Heladería DOMENICO",
