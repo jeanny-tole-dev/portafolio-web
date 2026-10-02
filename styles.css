@@ -2365,12 +2365,6 @@ body.light-theme .repo-date {
     color: #64748b !important;
 }
 
-body.light-theme .contact-card {
-    background: #ffffff !important;
-    border: 1px solid #cbd5e1 !important;
-    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05) !important;
-}
-
 body.light-theme .contact-card-value {
     color: #0f172a !important;
 }
@@ -2381,6 +2375,58 @@ body.light-theme .contact-card-label {
 
 body.light-theme .contact-card.github-card svg {
     fill: #0f172a !important;
+}
+
+/* EFECTOS HOVER SEGÚN EL COLOR DE CADA APLICACIÓN EN MODO CLARO */
+body.light-theme .contact-card {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05) !important;
+    transition: all 0.3s ease !important;
+}
+
+body.light-theme .contact-card:hover {
+    transform: translateY(-4px) !important;
+}
+
+/* Correo Electrónico: Naranja Marca */
+body.light-theme .contact-card.email-card:hover {
+    border-color: #ea580c !important;
+    background: rgba(234, 88, 12, 0.06) !important;
+    box-shadow: 0 8px 25px rgba(234, 88, 12, 0.15) !important;
+}
+
+/* WhatsApp Directo: Verde WhatsApp (#22c55e) */
+body.light-theme .contact-card.whatsapp-card:hover {
+    border-color: #22c55e !important;
+    background: rgba(34, 197, 94, 0.06) !important;
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.15) !important;
+}
+
+/* GitHub Repos: Morado/Magenta GitHub (#c026d3) */
+body.light-theme .contact-card.github-card:hover {
+    border-color: #c026d3 !important;
+    background: rgba(192, 38, 211, 0.06) !important;
+    box-shadow: 0 8px 25px rgba(192, 38, 211, 0.15) !important;
+}
+
+body.light-theme .contact-card.github-card:hover svg {
+    fill: #c026d3 !important;
+}
+
+/* LinkedIn Perfil: Azul LinkedIn (#0A66C2) */
+body.light-theme .contact-card.linkedin-card:hover {
+    border-color: #0A66C2 !important;
+    background: rgba(10, 102, 194, 0.06) !important;
+    box-shadow: 0 8px 25px rgba(10, 102, 194, 0.18) !important;
+}
+
+/* Repositorios de GitHub en Modo Claro */
+body.light-theme .github-repo-card:hover {
+    border-color: #c026d3 !important;
+    background: #ffffff !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 25px rgba(192, 38, 211, 0.12) !important;
 }
 
 body.light-theme .contact-location-pill {
