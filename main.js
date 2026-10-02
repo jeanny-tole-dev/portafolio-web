@@ -1,3 +1,30 @@
+// --- LÓGICA DE CAMBIO DE TEMA CLARO / OSCURO (EJECUCIÓN INMEDIATA & DELEGADA) ---
+(function initTheme() {
+    const savedTheme = localStorage.getItem("portfolio-theme");
+    const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+
+    if (savedTheme === "light" || (!savedTheme && prefersLight)) {
+        document.body.classList.add("light-theme");
+    }
+
+    document.addEventListener("click", (e) => {
+        const themeBtn = e.target.closest("#theme-toggle-btn");
+        if (!themeBtn) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isLight = document.body.classList.toggle("light-theme");
+        if (isLight) {
+            localStorage.setItem("portfolio-theme", "light");
+            themeBtn.setAttribute("title", "Cambiar a Modo Oscuro");
+        } else {
+            localStorage.setItem("portfolio-theme", "dark");
+            themeBtn.setAttribute("title", "Cambiar a Modo Claro");
+        }
+    });
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
     const designContainer = document.getElementById("design-grid-container");
     const frontendContainer = document.getElementById("frontend-grid-container");
@@ -465,35 +492,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // --- LÓGICA DE CAMBIO DE TEMA CLARO / OSCURO (THEME TOGGLE) ---
-    const initThemeToggle = () => {
-        const themeBtn = document.getElementById("theme-toggle-btn");
-        if (!themeBtn) return;
-
-        const savedTheme = localStorage.getItem("portfolio-theme");
-        const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-
-        if (savedTheme === "light" || (!savedTheme && prefersLight)) {
-            document.body.classList.add("light-theme");
-            themeBtn.setAttribute("title", "Cambiar a Modo Oscuro");
-        } else {
-            document.body.classList.remove("light-theme");
-            themeBtn.setAttribute("title", "Cambiar a Modo Claro");
-        }
-
-        themeBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            const isLight = document.body.classList.toggle("light-theme");
-            if (isLight) {
-                localStorage.setItem("portfolio-theme", "light");
-                themeBtn.setAttribute("title", "Cambiar a Modo Oscuro");
-            } else {
-                localStorage.setItem("portfolio-theme", "dark");
-                themeBtn.setAttribute("title", "Cambiar a Modo Claro");
-            }
-        });
-    };
-
-    initThemeToggle();
     initGitHubFeed();
 });
