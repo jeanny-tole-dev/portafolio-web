@@ -149,37 +149,7 @@ h2{color: #d946ef;
     flex-wrap: wrap;
     gap: 6px;
 }
-/* Menú de navegación flotante a la derecha */
-.nav-menu {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 1000;
-    background: rgba(11, 9, 20, 0.8);
-    padding: 15px 10px;
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-}
 
-.nav-menu a {
-    color: #94a3b8;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
-    writing-mode: vertical-rl; /* Pone el texto vertical para darle un toque ultra moderno */
-    transform: rotate(180deg);
-    transition: color 0.3s ease;
-    padding: 5px;
-}
-
-.nav-menu a:hover {
-    color: #ff9e64; /* Brilla en tono durazno al pasar el mouse */
-}
 /* Contenedor flotante derecho (Botón tema minimalista afuera + Nav) */
 .nav-floating-wrapper {
     position: fixed;
