@@ -1989,13 +1989,15 @@ body.light-theme {
 }
 
 body.light-theme section {
-    background-color: #f8fafc;
+    background: #f8fafc;
 }
 
 body.light-theme #proyectos,
 body.light-theme #github-actividad,
-body.light-theme #valor-corporativo {
-    background-color: #f1f5f9;
+body.light-theme .github-section,
+body.light-theme #valor-corporativo,
+body.light-theme .corporate-value-section {
+    background: #f0f4f8 !important;
 }
 
 body.light-theme h1,
@@ -2125,45 +2127,75 @@ body.light-theme .role-badge-minimal {
     color: #334155;
 }
 
-body.light-theme .github-profile-card,
-body.light-theme .github-repo-card {
-    background: #ffffff;
-    border-color: #cbd5e1;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+body.light-theme .projects-title-main {
+    color: #0f172a !important;
 }
 
+body.light-theme .editorial-tag {
+    color: #c026d3 !important;
+    background: rgba(192, 38, 211, 0.08) !important;
+    border-color: rgba(192, 38, 211, 0.2) !important;
+}
+
+body.light-theme .projects-header-editorial p,
+body.light-theme .github-bio {
+    color: #475569 !important;
+}
+
+body.light-theme .projects-header-editorial p strong {
+    color: #0f172a !important;
+}
+
+body.light-theme .github-profile-card,
+body.light-theme .github-repo-card {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05) !important;
+}
+
+body.light-theme .github-username,
 body.light-theme .github-repo-title {
-    color: #0f172a;
+    color: #0f172a !important;
+}
+
+body.light-theme .github-handle {
+    color: #ea580c !important;
+    background: rgba(234, 88, 12, 0.1) !important;
+    border-color: rgba(234, 88, 12, 0.2) !important;
 }
 
 body.light-theme .github-repo-desc {
-    color: #475569;
+    color: #475569 !important;
 }
 
 body.light-theme .github-repo-footer {
-    border-top-color: #f1f5f9;
+    border-top-color: #f1f5f9 !important;
 }
 
 body.light-theme .meta-pill {
-    background: #f1f5f9;
-    border-color: #e2e8f0;
-    color: #334155;
+    background: #f1f5f9 !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #334155 !important;
+}
+
+body.light-theme .repo-date {
+    color: #64748b !important;
 }
 
 body.light-theme .contact-card {
-    background: #ffffff;
-    border-color: #cbd5e1;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05) !important;
 }
 
 body.light-theme .contact-card-value {
-    color: #0f172a;
+    color: #0f172a !important;
 }
 
 body.light-theme .contact-card-label {
-    color: #64748b;
+    color: #64748b !important;
 }
 
 body.light-theme .contact-card.github-card svg {
-    fill: #0f172a;
+    fill: #0f172a !important;
 }
