@@ -497,4 +497,45 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     initGitHubFeed();
+
+    // --- LÓGICA DE SCROLLSPY PARA MARCAR SECCIÓN ACTIVA EN EL NAV MENU ---
+    const initScrollSpy = () => {
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        const sections = document.querySelectorAll('section[id]');
+
+        if (!navLinks.length || !sections.length) return;
+
+        const updateActiveNav = () => {
+            let currentSectionId = '';
+            const scrollPos = window.scrollY + (window.innerHeight / 3);
+
+            sections.forEach(sec => {
+                const secTop = sec.offsetTop;
+                const secHeight = sec.offsetHeight;
+                if (scrollPos >= secTop && scrollPos < secTop + secHeight) {
+                    currentSectionId = sec.getAttribute('id');
+                }
+            });
+
+            // Si está al final de la página, activar contacto
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+                currentSectionId = 'contacto';
+            }
+
+            navLinks.forEach(link => {
+                const targetHref = link.getAttribute('href');
+                if (targetHref === `#${currentSectionId}`) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', updateActiveNav, { passive: true });
+        window.addEventListener('resize', updateActiveNav, { passive: true });
+        updateActiveNav();
+    };
+
+    initScrollSpy();
 });
