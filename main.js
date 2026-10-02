@@ -312,23 +312,142 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --- LÓGICA DE ACORDEÓN DESPLEGABLE DE VALOR CORPORATIVO ---
-    const accordionItems = document.querySelectorAll('.corporate-accordion-wrapper .accordion-item');
-    accordionItems.forEach(item => {
-        const header = item.querySelector('.accordion-header');
-        if (header) {
-            header.addEventListener('click', () => {
-                const isOpen = item.classList.contains('active');
-                accordionItems.forEach(otherItem => {
-                    otherItem.classList.remove('active');
-                    const otherHeader = otherItem.querySelector('.accordion-header');
-                    if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
-                });
-                if (!isOpen) {
-                    item.classList.add('active');
-                    header.setAttribute('aria-expanded', 'true');
+    // --- LÓGICA DE INTEGRACIÓN API EN VIVO DE GITHUB ---
+    const initGitHubFeed = async () => {
+        const username = "jeanny-tole-dev";
+        const reposContainer = document.getElementById("github-repos-container");
+        const reposCountBadge = document.getElementById("gh-repos-count");
+        if (!reposContainer) return;
+
+        const fallbackRepos = [
+            {
+                name: "heladeria-react-supabase",
+                description: "Taller de Heladería e-commerce interactivo en React + Vite + Supabase. Autenticación y roles de usuario.",
+                language: "JavaScript",
+                stargazers_count: 0,
+                html_url: "https://github.com/jeanny-tole-dev/heladeria-react-supabase",
+                updated_at: "2026-06-03T22:00:19Z"
+            },
+            {
+                name: "portafolio-web",
+                description: "Portafolio web profesional e interactivo con diseño editorial, animaciones y conexión directa a la API de GitHub.",
+                language: "CSS / JS",
+                stargazers_count: 0,
+                html_url: "https://github.com/jeanny-tole-dev/portafolio-web",
+                updated_at: "2026-10-01T22:37:13Z"
+            },
+            {
+                name: "Biblioteca-virtual-infantil",
+                description: "Sistema web frontend interactivo para exploración de recursos educativos infantiles.",
+                language: "JavaScript",
+                stargazers_count: 0,
+                html_url: "https://github.com/jeanny-tole-dev/Biblioteca-virtual-infantil",
+                updated_at: "2026-04-30T14:25:17Z"
+            },
+            {
+                name: "reto-claro-laravel",
+                description: "Sistema CRUD en Laravel (PHP) para el programa de Tecnóloga en Desarrollo Publicitario (SENA).",
+                language: "PHP / Laravel",
+                stargazers_count: 0,
+                html_url: "https://github.com/jeanny-tole-dev/reto-claro-laravel",
+                updated_at: "2026-03-25T19:56:04Z"
+            },
+            {
+                name: "jeanny-tole-dev",
+                description: "Perfil especial y documentación pública de GitHub.",
+                language: "Markdown",
+                stargazers_count: 0,
+                html_url: "https://github.com/jeanny-tole-dev/jeanny-tole-dev",
+                updated_at: "2026-09-28T20:30:25Z"
+            }
+        ];
+
+        const getLangColor = (lang) => {
+            if (!lang) return "#a855f7";
+            const l = lang.toLowerCase();
+            if (l.includes("javascript") || l.includes("js")) return "#f7df1e";
+            if (l.includes("react")) return "#61dafb";
+            if (l.includes("css")) return "#1572b6";
+            if (l.includes("html")) return "#e34f26";
+            if (l.includes("php") || l.includes("laravel")) return "#777bb4";
+            if (l.includes("three")) return "#000000";
+            return "#d946ef";
+        };
+
+        const formatDate = (isoStr) => {
+            if (!isoStr) return "";
+            const d = new Date(isoStr);
+            return d.toLocaleDateString("es-ES", { year: 'numeric', month: 'short', day: 'numeric' });
+        };
+
+        const renderRepos = (reposList) => {
+            reposContainer.innerHTML = reposList.map(repo => {
+                const langColor = getLangColor(repo.language);
+                const descText = repo.description || "Repositorio público de código en GitHub.";
+                const starsCount = repo.stargazers_count || 0;
+                const updatedStr = formatDate(repo.updated_at);
+
+                return `
+                    <div class="github-repo-card">
+                        <div class="github-repo-header">
+                            <span class="github-repo-icon">📦</span>
+                            <h4 class="github-repo-title">${repo.name}</h4>
+                        </div>
+                        <p class="github-repo-desc">${descText}</p>
+                        <div class="github-repo-footer">
+                            <div class="github-repo-meta">
+                                <span class="repo-lang-badge" style="--lang-color: ${langColor}">
+                                    <span class="lang-dot"></span>
+                                    <span>${repo.language || 'Código'}</span>
+                                </span>
+                                ${starsCount > 0 ? `<span class="repo-stars">★ ${starsCount}</span>` : ''}
+                                ${updatedStr ? `<span class="repo-date">Editado: ${updatedStr}</span>` : ''}
+                            </div>
+                            <a href="${repo.html_url}" target="_blank" class="github-repo-link" title="Ver código en GitHub">
+                                <span>Ver Repositorio</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join("");
+        };
+
+        // Mostrar cargando temporalmente
+        reposContainer.innerHTML = `
+            <div class="github-loading-box">
+                <span class="github-spinner"></span>
+                <p>Cargando repositorios desde GitHub API...</p>
+            </div>
+        `;
+
+        try {
+            const [userRes, reposRes] = await Promise.all([
+                fetch(`https://api.github.com/users/${username}`),
+                fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`)
+            ]);
+
+            if (userRes.ok) {
+                const userData = await userRes.json();
+                if (reposCountBadge && userData.public_repos !== undefined) {
+                    reposCountBadge.textContent = userData.public_repos;
                 }
-            });
+            }
+
+            if (reposRes.ok) {
+                const reposData = await reposRes.json();
+                if (Array.isArray(reposData) && reposData.length > 0) {
+                    renderRepos(reposData);
+                    return;
+                }
+            }
+            // Fallback si la respuesta viene vacía o con límite superado
+            renderRepos(fallbackRepos);
+        } catch (err) {
+            console.warn("No se pudo conectar a GitHub API (usando datos locales de respaldo):", err);
+            renderRepos(fallbackRepos);
         }
-    });
+    };
+
+    initGitHubFeed();
 });

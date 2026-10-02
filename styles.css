@@ -1643,3 +1643,324 @@ img.img-error {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================================
+   ESTILOS PARA INTEGRACIÓN Y SECCIÓN EN VIVO DE GITHUB
+   ========================================================================== */
+
+.btn-github {
+    background: rgba(255, 255, 255, 0.05);
+    color: #f8fafc;
+    padding: 0.75rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-github:hover {
+    border-color: #ff9e64;
+    background: rgba(255, 158, 100, 0.1);
+    transform: translateY(-2px);
+    color: #ff9e64;
+}
+
+.github-btn-icon {
+    flex-shrink: 0;
+}
+
+.github-section {
+    background: linear-gradient(180deg, #0b0914 0%, #0d0a1a 100%);
+    width: 100%;
+}
+
+.github-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.github-profile-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+.github-profile-card:hover {
+    border-color: rgba(255, 120, 73, 0.4);
+}
+
+.github-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.github-avatar-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.github-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #ff7849;
+    object-fit: cover;
+}
+
+.github-online-badge {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 14px;
+    height: 14px;
+    background-color: #22c55e;
+    border: 2px solid #0b0914;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+}
+
+.github-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.github-user-top {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.github-username {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.github-handle {
+    font-size: 0.85rem;
+    color: #ff9e64;
+    font-weight: 600;
+    background: rgba(255, 158, 100, 0.1);
+    padding: 2px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 158, 100, 0.2);
+}
+
+.github-bio {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    max-width: 600px;
+}
+
+.github-meta-pills {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.4rem;
+}
+
+.meta-pill {
+    font-size: 0.78rem;
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.meta-pill strong {
+    color: #ff7849;
+}
+
+.btn-github-profile {
+    background: #ff7849;
+    color: #0b0914;
+    padding: 0.8rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.btn-github-profile:hover {
+    background: #ff9e64;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 120, 73, 0.4);
+}
+
+.github-repos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.github-repo-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.github-repo-card:hover {
+    border-color: rgba(217, 70, 239, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.github-repo-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.github-repo-icon {
+    font-size: 1.2rem;
+}
+
+.github-repo-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f8fafc;
+    word-break: break-word;
+}
+
+.github-repo-desc {
+    font-size: 0.86rem;
+    color: #94a3b8;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.github-repo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.github-repo-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.75rem;
+    color: #cbd5e1;
+}
+
+.repo-lang-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+}
+
+.lang-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--lang-color, #d946ef);
+}
+
+.repo-stars {
+    color: #eab308;
+    font-weight: 600;
+}
+
+.repo-date {
+    color: #64748b;
+}
+
+.github-repo-link {
+    color: #d946ef;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.github-repo-link:hover {
+    color: #ff9e64;
+    transform: translateX(3px);
+}
+
+.github-loading-box {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    gap: 1rem;
+    color: #94a3b8;
+}
+
+.github-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #ff7849;
+    border-radius: 50%;
+    animation: ghSpin 0.8s linear infinite;
+}
+
+@keyframes ghSpin {
+    to { transform: rotate(360deg); }
+}
+
+.contact-card.github-card:hover {
+    border-color: #ff9e64;
+    background: rgba(255, 158, 100, 0.05);
+}
+
+@media (max-width: 768px) {
+    .github-profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .btn-github-profile {
+        width: 100%;
+        justify-content: center;
+    }
+}
