@@ -87,11 +87,6 @@ h2{color: #d946ef;
     gap: 3.5rem;
 }
 
-.text-center {
-    text-align: center;
-    margin: 0 auto 1.5rem auto;
-}
-
 /* CUADRÍCULA DE TARJETAS DE CERTIFICADOS ACADÉMICOS */
 .cert-cards-grid {
     display: grid;
