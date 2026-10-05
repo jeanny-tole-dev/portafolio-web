@@ -1,17 +1,17 @@
 {
   "CSS-003": {
-    "occurrences": 201,
+    "occurrences": 209,
     "confidence": 1,
     "mastered_explicitly": false,
     "first_seen": "2026-09-28T23:47:43.485Z",
-    "last_seen": "2026-10-05T19:15:51.336Z"
+    "last_seen": "2026-10-05T19:35:42.239Z"
   },
   "CSS-001": {
-    "occurrences": 844,
+    "occurrences": 1226,
     "confidence": 1,
     "mastered_explicitly": false,
     "first_seen": "2026-09-29T11:45:53.259Z",
-    "last_seen": "2026-10-05T19:15:51.318Z"
+    "last_seen": "2026-10-05T19:35:42.209Z"
   },
   "SEC-004": {
     "occurrences": 40,
