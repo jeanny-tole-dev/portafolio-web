@@ -2621,10 +2621,10 @@ body.light-theme .footer-back-top:hover {
 }
 
 /* ==========================================================================
-   MENÚ TIMÓN DE NAVEGACIÓN FLOTANTE (EXCLUSIVO PARA MÓVIL / CELULARES)
+   MENÚ DE TRES PUNTOS (KEBAB MENU FLOTANTE EXCLUSIVO PARA MÓVIL)
    ========================================================================== */
 
-/* Ocultar elementos exclusivos de móvil en pantallas grandes */
+.mobile-kebab-trigger,
 .mobile-helm-trigger,
 .mobile-helm-overlay {
     display: none;
@@ -2636,13 +2636,13 @@ body.light-theme .footer-back-top:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(11, 9, 20, 0.6);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background: rgba(11, 9, 20, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     z-index: 1999;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.25s ease;
 }
 
 .mobile-helm-overlay.active {
@@ -2651,70 +2651,78 @@ body.light-theme .footer-back-top:hover {
     pointer-events: auto;
 }
 
-/* RESPONSIVO MÓVIL (<= 768px): REDISEÑO TIPO TIMÓN FLOTANTE */
+/* RESPONSIVO MÓVIL (<= 768px): MENÚ DESPLEGABLE DE TRES PUNTOS (TOP RIGHT) */
 @media (max-width: 768px) {
-    /* Mover el contenedor al extremo inferior derecho sin cubrir el contenido */
+    /* Ubicación del contenedor en la esquina superior derecha */
     .nav-floating-wrapper {
         position: fixed !important;
-        right: 20px !important;
-        bottom: 24px !important;
-        top: auto !important;
+        right: 18px !important;
+        top: 18px !important;
+        bottom: auto !important;
         transform: none !important;
-        gap: 12px;
+        gap: 8px;
         z-index: 2000;
         align-items: flex-end;
     }
 
-    /* Botón Timón Circular Flotante */
+    /* Botón de Tres Puntos (⋮) */
+    .mobile-kebab-trigger,
     .mobile-helm-trigger {
         display: flex !important;
         align-items: center;
         justify-content: center;
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: #0b0914;
-        border: 2px solid #ff7849;
-        color: #ff7849;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(15, 13, 26, 0.92);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #f8fafc;
         cursor: pointer;
         outline: none;
-        box-shadow: 0 8px 25px rgba(255, 120, 73, 0.5);
-        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, border-color 0.3s ease;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        transition: all 0.25s ease;
         z-index: 2001;
-        position: relative;
     }
 
+    .kebab-close-svg,
     .helm-close-svg {
         display: none;
     }
 
-    /* Estado cuando el Timón está ABIERTO */
+    /* Estado abierto cuando se hace clic en ⋮ */
+    .nav-floating-wrapper.kebab-active .mobile-kebab-trigger,
     .nav-floating-wrapper.helm-active .mobile-helm-trigger {
-        transform: rotate(180deg) scale(1.08);
-        border-color: #d946ef;
-        color: #d946ef;
-        box-shadow: 0 8px 25px rgba(217, 70, 239, 0.55);
+        border-color: #ff7849;
+        color: #ff7849;
+        background: rgba(15, 13, 26, 0.98);
+        box-shadow: 0 6px 25px rgba(255, 120, 73, 0.4);
     }
 
+    .nav-floating-wrapper.kebab-active .kebab-svg-icon,
     .nav-floating-wrapper.helm-active .helm-svg-icon {
         display: none;
     }
 
+    .nav-floating-wrapper.kebab-active .kebab-close-svg,
     .nav-floating-wrapper.helm-active .helm-close-svg {
         display: block;
     }
 
-    /* Ocultar el panel de menú y botón de tema por defecto en celular */
+    /* Panel desplegable (Dropdown Card) oculto por defecto */
     .nav-floating-wrapper #theme-toggle-btn,
     .nav-floating-wrapper .nav-menu {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        transform: translateY(20px) scale(0.9);
-        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s ease;
+        transform: translateY(-10px) scale(0.95);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     }
 
-    /* Al abrir el Timón: Despliega el dock sobre el botón Timón */
+    /* Al desplegar: se muestra la tarjeta desplegable debajo de los 3 puntos */
+    .nav-floating-wrapper.kebab-active #theme-toggle-btn,
+    .nav-floating-wrapper.kebab-active .nav-menu,
     .nav-floating-wrapper.helm-active #theme-toggle-btn,
     .nav-floating-wrapper.helm-active .nav-menu {
         opacity: 1;
@@ -2723,75 +2731,94 @@ body.light-theme .footer-back-top:hover {
         transform: translateY(0) scale(1);
     }
 
-    /* Adaptación del Nav Menu en Móvil: Formato Lectura Horizontal */
+    /* Menú desplegable flotante estilo tarjeta de opciones */
     .nav-menu {
-        background: rgba(15, 13, 26, 0.95) !important;
-        border: 1px solid rgba(255, 120, 73, 0.35) !important;
-        border-radius: 20px !important;
-        padding: 12px 14px !important;
+        background: rgba(15, 13, 26, 0.98) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 16px !important;
+        padding: 10px !important;
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6) !important;
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         display: flex;
         flex-direction: column;
-        gap: 6px;
-        min-width: 175px;
+        gap: 4px;
+        min-width: 180px;
     }
 
     .nav-menu a {
         writing-mode: horizontal-tb !important;
         transform: none !important;
-        padding: 9px 16px !important;
-        border-radius: 12px !important;
-        text-align: center;
-        font-size: 0.92rem !important;
+        padding: 9px 14px !important;
+        border-radius: 10px !important;
+        text-align: left;
+        font-size: 0.9rem !important;
         font-weight: 600;
-        display: block;
+        display: flex;
+        align-items: center;
+        gap: 8px;
         width: 100%;
+        color: #cbd5e1;
     }
 
     .nav-menu a:hover,
     .nav-menu a.active {
         transform: none !important;
+        background: rgba(255, 120, 73, 0.15) !important;
+        color: #ff7849 !important;
+        border-color: rgba(255, 120, 73, 0.3) !important;
     }
 
-    /* Botón de cambio de tema flotando arriba del dock */
+    /* Botón de cambio de tema dentro del menú desplegable */
     .theme-toggle-btn-minimal {
-        background: rgba(15, 13, 26, 0.95) !important;
-        border: 1px solid rgba(255, 255, 255, 0.18) !important;
-        border-radius: 50% !important;
-        width: 46px !important;
-        height: 46px !important;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+        background: rgba(15, 13, 26, 0.98) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 12px !important;
+        width: 44px !important;
+        height: 44px !important;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
     }
 }
 
-/* Adaptación del Timón en Modo Claro para Celulares */
+/* Adaptación del Menú de Tres Puntos en Modo Claro */
+body.light-theme .mobile-kebab-trigger,
 body.light-theme .mobile-helm-trigger {
     background: #ffffff !important;
-    border-color: #ea580c !important;
-    color: #ea580c !important;
-    box-shadow: 0 8px 25px rgba(234, 88, 12, 0.35) !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08) !important;
 }
 
+body.light-theme .nav-floating-wrapper.kebab-active .mobile-kebab-trigger,
 body.light-theme .nav-floating-wrapper.helm-active .mobile-helm-trigger {
-    border-color: #c026d3 !important;
-    color: #c026d3 !important;
-    box-shadow: 0 8px 25px rgba(192, 38, 211, 0.4) !important;
+    border-color: #ea580c !important;
+    color: #ea580c !important;
+    box-shadow: 0 6px 25px rgba(234, 88, 12, 0.25) !important;
 }
 
 body.light-theme .mobile-helm-overlay {
-    background: rgba(255, 255, 255, 0.65) !important;
+    background: rgba(255, 255, 255, 0.5) !important;
 }
 
 body.light-theme .nav-floating-wrapper .nav-menu {
-    background: rgba(255, 255, 255, 0.96) !important;
+    background: #ffffff !important;
     border-color: #cbd5e1 !important;
-    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.15) !important;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12) !important;
+}
+
+body.light-theme .nav-floating-wrapper .nav-menu a {
+    color: #334155 !important;
+}
+
+body.light-theme .nav-floating-wrapper .nav-menu a:hover,
+body.light-theme .nav-floating-wrapper .nav-menu a.active {
+    background: rgba(234, 88, 12, 0.1) !important;
+    color: #ea580c !important;
+    border-color: rgba(234, 88, 12, 0.3) !important;
 }
 
 body.light-theme .nav-floating-wrapper .theme-toggle-btn-minimal {
     background: #ffffff !important;
     border-color: #cbd5e1 !important;
-    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1) !important;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08) !important;
 }

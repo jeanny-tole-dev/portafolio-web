@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeanny Paola Tole | Portafolio</title>
-    <link rel="stylesheet" href="styles.css?v=15.0">
+    <link rel="stylesheet" href="styles.css?v=16.0">
 </head>
 <body>
 
@@ -711,31 +711,25 @@
         </div>
     </section>
 
-    <!-- CONTENEDOR FLOTANTE LATERAL Y MENÚ TIMÓN MÓVIL -->
+    <!-- CONTENEDOR FLOTANTE LATERAL Y MENÚ DE TRES PUNTOS MÓVIL -->
     <div class="nav-floating-wrapper" id="nav-floating-wrapper">
         
-        <!-- Botón Timón Flotante (Exclusivo para navegación en Celular / Móvil) -->
-        <button id="mobile-helm-toggle" class="mobile-helm-trigger" aria-label="Abrir Timón de Navegación" title="Menú Timón de Navegación">
-            <!-- Icono Timón SVG -->
-            <svg class="helm-svg-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"></circle>
-                <circle cx="12" cy="12" r="3"></circle>
-                <line x1="12" y1="3" x2="12" y2="9"></line>
-                <line x1="12" y1="15" x2="12" y2="21"></line>
-                <line x1="3" y1="12" x2="9" y2="12"></line>
-                <line x1="15" y1="12" x2="21" y2="12"></line>
-                <line x1="5.64" y1="5.64" x2="9.88" y2="9.88"></line>
-                <line x1="14.12" y1="14.12" x2="18.36" y2="18.36"></line>
-                <line x1="5.64" y1="19.78" x2="9.88" y2="15.64"></line>
-                <line x1="14.12" y1="9.88" x2="18.36" y2="5.64"></line>
+        <!-- Botón de Tres Puntos (Exclusivo para navegación en Celular / Móvil, arriba a la derecha) -->
+        <button id="mobile-kebab-toggle" class="mobile-kebab-trigger" aria-label="Abrir Menú de Opciones" title="Menú de Navegación">
+            <!-- Icono de Tres Puntos Verticales (⋮) -->
+            <svg class="kebab-svg-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <circle cx="12" cy="5" r="2.2"></circle>
+                <circle cx="12" cy="12" r="2.2"></circle>
+                <circle cx="12" cy="19" r="2.2"></circle>
             </svg>
             <!-- Icono X de Cierre -->
-            <svg class="helm-close-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="kebab-close-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
         </button>
 
+        <!-- Botón de Alternancia de Tema -->
         <button id="theme-toggle-btn" class="theme-toggle-btn-minimal" aria-label="Cambiar tema de color" title="Cambiar a Modo Claro">
             <!-- Sol Outline SVG (Modo Oscuro -> pasa a Claro) -->
             <svg class="theme-svg-icon sun-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -756,21 +750,21 @@
         </button>
 
         <nav class="nav-menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#github-actividad">GitHub</a>
-            <a href="#certificados">Certificados</a>
-            <a href="#valor-corporativo">Mi Valor</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#inicio"><span>🏠</span> Inicio</a>
+            <a href="#proyectos"><span>💼</span> Proyectos</a>
+            <a href="#github-actividad"><span>🐙</span> GitHub</a>
+            <a href="#certificados"><span>📜</span> Certificados</a>
+            <a href="#valor-corporativo"><span>💎</span> Mi Valor</a>
+            <a href="#contacto"><span>✉️</span> Contacto</a>
         </nav>
     </div>
 
-    <!-- Telón de fondo para cerrar el Timón Móvil al hacer tap afuera -->
+    <!-- Telón de fondo para cerrar el menú desplegable al hacer tap afuera -->
     <div class="mobile-helm-overlay" id="mobile-helm-overlay"></div>
 
     <!-- SCRIPTS DE AUTOMATIZACIÓN -->
-    <script src="projects.data.js?v=15.0"></script>
-    <script src="main.js?v=15.0"></script>
+    <script src="projects.data.js?v=16.0"></script>
+    <script src="main.js?v=16.0"></script>
 
 </body>
 </html>

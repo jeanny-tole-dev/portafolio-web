@@ -539,22 +539,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initScrollSpy();
 
-    // --- LÓGICA DEL MENÚ FLOTANTE "TIMÓN DE NAVEGACIÓN" PARA MÓVIL ---
-    const initMobileHelm = () => {
+    // --- LÓGICA DEL MENÚ DE TRES PUNTOS (KEBAB MENU) PARA MÓVIL ---
+    const initMobileKebabMenu = () => {
         const wrapper = document.getElementById("nav-floating-wrapper");
-        const trigger = document.getElementById("mobile-helm-toggle");
+        const trigger = document.getElementById("mobile-kebab-toggle") || document.getElementById("mobile-helm-toggle");
         const overlay = document.getElementById("mobile-helm-overlay");
         const navLinks = document.querySelectorAll(".nav-menu a");
-        const themeBtn = document.getElementById("theme-toggle-btn");
 
         if (!wrapper || !trigger) return;
 
-        const toggleHelm = (e) => {
+        const toggleMenu = (e) => {
             if (e) {
                 e.preventDefault();
                 e.stopPropagation();
             }
-            const isOpen = wrapper.classList.toggle("helm-active");
+            const isOpen = wrapper.classList.toggle("kebab-active");
             if (overlay) {
                 if (isOpen) {
                     overlay.classList.add("active");
@@ -564,29 +563,23 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         };
 
-        const closeHelm = () => {
+        const closeMenu = () => {
+            wrapper.classList.remove("kebab-active");
             wrapper.classList.remove("helm-active");
             if (overlay) overlay.classList.remove("active");
         };
 
-        trigger.addEventListener("click", toggleHelm);
-        if (overlay) overlay.addEventListener("click", closeHelm);
+        trigger.addEventListener("click", toggleMenu);
+        if (overlay) overlay.addEventListener("click", closeMenu);
 
-        // Cerrar el timón al pulsar cualquier enlace
         navLinks.forEach(link => {
-            link.addEventListener("click", closeHelm);
+            link.addEventListener("click", closeMenu);
         });
 
-        // Cerrar también si se pulsa el botón de cambio de tema
-        if (themeBtn) {
-            themeBtn.addEventListener("click", closeHelm);
-        }
-
-        // Cerrar al pulsar tecla ESC
         document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") closeHelm();
+            if (e.key === "Escape") closeMenu();
         });
     };
 
-    initMobileHelm();
+    initMobileKebabMenu();
 });
