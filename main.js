@@ -538,4 +538,55 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     initScrollSpy();
+
+    // --- LÓGICA DEL MENÚ FLOTANTE "TIMÓN DE NAVEGACIÓN" PARA MÓVIL ---
+    const initMobileHelm = () => {
+        const wrapper = document.getElementById("nav-floating-wrapper");
+        const trigger = document.getElementById("mobile-helm-toggle");
+        const overlay = document.getElementById("mobile-helm-overlay");
+        const navLinks = document.querySelectorAll(".nav-menu a");
+        const themeBtn = document.getElementById("theme-toggle-btn");
+
+        if (!wrapper || !trigger) return;
+
+        const toggleHelm = (e) => {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            const isOpen = wrapper.classList.toggle("helm-active");
+            if (overlay) {
+                if (isOpen) {
+                    overlay.classList.add("active");
+                } else {
+                    overlay.classList.remove("active");
+                }
+            }
+        };
+
+        const closeHelm = () => {
+            wrapper.classList.remove("helm-active");
+            if (overlay) overlay.classList.remove("active");
+        };
+
+        trigger.addEventListener("click", toggleHelm);
+        if (overlay) overlay.addEventListener("click", closeHelm);
+
+        // Cerrar el timón al pulsar cualquier enlace
+        navLinks.forEach(link => {
+            link.addEventListener("click", closeHelm);
+        });
+
+        // Cerrar también si se pulsa el botón de cambio de tema
+        if (themeBtn) {
+            themeBtn.addEventListener("click", closeHelm);
+        }
+
+        // Cerrar al pulsar tecla ESC
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeHelm();
+        });
+    };
+
+    initMobileHelm();
 });

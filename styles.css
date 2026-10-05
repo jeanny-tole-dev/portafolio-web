@@ -2619,3 +2619,179 @@ body.light-theme .footer-back-top:hover {
     background: rgba(192, 38, 211, 0.15) !important;
     color: #c026d3 !important;
 }
+
+/* ==========================================================================
+   MENÚ TIMÓN DE NAVEGACIÓN FLOTANTE (EXCLUSIVO PARA MÓVIL / CELULARES)
+   ========================================================================== */
+
+/* Ocultar elementos exclusivos de móvil en pantallas grandes */
+.mobile-helm-trigger,
+.mobile-helm-overlay {
+    display: none;
+}
+
+.mobile-helm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(11, 9, 20, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 1999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-helm-overlay.active {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* RESPONSIVO MÓVIL (<= 768px): REDISEÑO TIPO TIMÓN FLOTANTE */
+@media (max-width: 768px) {
+    /* Mover el contenedor al extremo inferior derecho sin cubrir el contenido */
+    .nav-floating-wrapper {
+        position: fixed !important;
+        right: 20px !important;
+        bottom: 24px !important;
+        top: auto !important;
+        transform: none !important;
+        gap: 12px;
+        z-index: 2000;
+        align-items: flex-end;
+    }
+
+    /* Botón Timón Circular Flotante */
+    .mobile-helm-trigger {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #0b0914;
+        border: 2px solid #ff7849;
+        color: #ff7849;
+        cursor: pointer;
+        outline: none;
+        box-shadow: 0 8px 25px rgba(255, 120, 73, 0.5);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, border-color 0.3s ease;
+        z-index: 2001;
+        position: relative;
+    }
+
+    .helm-close-svg {
+        display: none;
+    }
+
+    /* Estado cuando el Timón está ABIERTO */
+    .nav-floating-wrapper.helm-active .mobile-helm-trigger {
+        transform: rotate(180deg) scale(1.08);
+        border-color: #d946ef;
+        color: #d946ef;
+        box-shadow: 0 8px 25px rgba(217, 70, 239, 0.55);
+    }
+
+    .nav-floating-wrapper.helm-active .helm-svg-icon {
+        display: none;
+    }
+
+    .nav-floating-wrapper.helm-active .helm-close-svg {
+        display: block;
+    }
+
+    /* Ocultar el panel de menú y botón de tema por defecto en celular */
+    .nav-floating-wrapper #theme-toggle-btn,
+    .nav-floating-wrapper .nav-menu {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(20px) scale(0.9);
+        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s ease;
+    }
+
+    /* Al abrir el Timón: Despliega el dock sobre el botón Timón */
+    .nav-floating-wrapper.helm-active #theme-toggle-btn,
+    .nav-floating-wrapper.helm-active .nav-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0) scale(1);
+    }
+
+    /* Adaptación del Nav Menu en Móvil: Formato Lectura Horizontal */
+    .nav-menu {
+        background: rgba(15, 13, 26, 0.95) !important;
+        border: 1px solid rgba(255, 120, 73, 0.35) !important;
+        border-radius: 20px !important;
+        padding: 12px 14px !important;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6) !important;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-width: 175px;
+    }
+
+    .nav-menu a {
+        writing-mode: horizontal-tb !important;
+        transform: none !important;
+        padding: 9px 16px !important;
+        border-radius: 12px !important;
+        text-align: center;
+        font-size: 0.92rem !important;
+        font-weight: 600;
+        display: block;
+        width: 100%;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        transform: none !important;
+    }
+
+    /* Botón de cambio de tema flotando arriba del dock */
+    .theme-toggle-btn-minimal {
+        background: rgba(15, 13, 26, 0.95) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        border-radius: 50% !important;
+        width: 46px !important;
+        height: 46px !important;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+    }
+}
+
+/* Adaptación del Timón en Modo Claro para Celulares */
+body.light-theme .mobile-helm-trigger {
+    background: #ffffff !important;
+    border-color: #ea580c !important;
+    color: #ea580c !important;
+    box-shadow: 0 8px 25px rgba(234, 88, 12, 0.35) !important;
+}
+
+body.light-theme .nav-floating-wrapper.helm-active .mobile-helm-trigger {
+    border-color: #c026d3 !important;
+    color: #c026d3 !important;
+    box-shadow: 0 8px 25px rgba(192, 38, 211, 0.4) !important;
+}
+
+body.light-theme .mobile-helm-overlay {
+    background: rgba(255, 255, 255, 0.65) !important;
+}
+
+body.light-theme .nav-floating-wrapper .nav-menu {
+    background: rgba(255, 255, 255, 0.96) !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.15) !important;
+}
+
+body.light-theme .nav-floating-wrapper .theme-toggle-btn-minimal {
+    background: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1) !important;
+}
