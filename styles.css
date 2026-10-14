@@ -3055,7 +3055,22 @@ body.light-theme .nav-floating-wrapper .nav-menu a.active {
 }
 
 body.light-theme .nav-floating-wrapper .theme-toggle-btn-minimal {
-    background: #ffffff !important;
-    border-color: #cbd5e1 !important;
-    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08) !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #475569 !important;
+}
+
+body.light-theme .nav-floating-wrapper .theme-toggle-btn-minimal:hover {
+    color: #ea580c !important;
+    background: transparent !important;
+    transform: scale(1.18) rotate(12deg);
+}
+
+@media (max-width: 768px) {
+    body.light-theme .nav-floating-wrapper .theme-toggle-btn-minimal {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08) !important;
+    }
 }
