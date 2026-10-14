@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="card-front-info">
                             <div class="card-front-header">
                                 <span class="editorial-tag">${categoryLabel}</span>
-                                <span class="flip-hint">Girar ↻</span>
+                                <span class="flip-hint" role="button" tabindex="0" title="Toca para girar la tarjeta">Girar ↻</span>
                             </div>
                             <h3>${project.title}</h3>
                         </div>
@@ -170,7 +170,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     <!-- CARA TRASERA -->
                     <div class="flip-card-back">
                         <div class="flip-card-back-scroll">
-                            <span class="editorial-tag-back">${categoryLabel}</span>
+                            <div class="flip-card-back-header">
+                                <span class="editorial-tag-back">${categoryLabel}</span>
+                                <span class="flip-hint flip-hint-back" role="button" tabindex="0" title="Toca para volver a la portada">Volver ↺</span>
+                            </div>
                             <h3>${project.title}</h3>
                             <p>${project.description}</p>
                             ${metricBadgeHTML}
@@ -249,6 +252,33 @@ document.addEventListener("DOMContentLoaded", () => {
                 updateActiveCard(currentIndex + 1);
             });
         }
+
+        // Soporte de deslizamiento táctil horizontal (Swipe) para cambiar de proyecto en celulares
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        container.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 1) {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }
+        }, { passive: true });
+
+        container.addEventListener('touchend', (e) => {
+            if (e.changedTouches.length === 1) {
+                const touchEndX = e.changedTouches[0].clientX;
+                const touchEndY = e.changedTouches[0].clientY;
+                const diffX = touchEndX - touchStartX;
+                const diffY = touchEndY - touchStartY;
+                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+                    if (diffX < 0) {
+                        updateActiveCard(currentIndex + 1); // Swipe izquierda -> Siguiente proyecto
+                    } else {
+                        updateActiveCard(currentIndex - 1); // Swipe derecha -> Anterior proyecto
+                    }
+                }
+            }
+        }, { passive: true });
     };
 
     // Inicializar bucles para ambas columnas
@@ -301,13 +331,42 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // 2. Al hacer clic en la foto, avanza a la siguiente foto si el proyecto tiene varias
+        // 2. Deslizamiento táctil (Swipe) para avanzar/retroceder fotos en el mini-carrusel
         if (imagePreviewBox && sliderItems.length > 1) {
+            let imgTouchStartX = 0;
+            let imgTouchStartY = 0;
+
+            imagePreviewBox.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 1) {
+                    imgTouchStartX = e.touches[0].clientX;
+                    imgTouchStartY = e.touches[0].clientY;
+                }
+            }, { passive: true });
+
+            imagePreviewBox.addEventListener('touchend', (e) => {
+                if (e.changedTouches.length === 1) {
+                    const imgTouchEndX = e.changedTouches[0].clientX;
+                    const imgTouchEndY = e.changedTouches[0].clientY;
+                    const dX = imgTouchEndX - imgTouchStartX;
+                    const dY = imgTouchEndY - imgTouchStartY;
+                    if (Math.abs(dX) > Math.abs(dY) && Math.abs(dX) > 35) {
+                        e.stopPropagation();
+                        let currentIdx = parseInt(imagePreviewBox.getAttribute('data-active-index') || 0);
+                        if (dX < 0) {
+                            updateActiveImage(currentIdx + 1); // Swipe izquierda -> Siguiente foto
+                        } else {
+                            updateActiveImage(currentIdx - 1); // Swipe derecha -> Foto anterior
+                        }
+                    }
+                }
+            }, { passive: true });
+
+            // Al hacer clic en la foto, avanza a la siguiente foto
             imagePreviewBox.addEventListener('click', (e) => {
                 if (e.target.tagName === 'VIDEO' || e.target.closest('video') || e.target.closest('.mini-carousel-arrow') || e.target.closest('.mini-card-dot')) {
-                    return; // Permitir usar controles de video o flechas sin interferencia
+                    return;
                 }
-                e.stopPropagation(); // Evita que la tarjeta se voltee al tocar la imagen
+                e.stopPropagation();
                 let currentIdx = parseInt(imagePreviewBox.getAttribute('data-active-index') || 0);
                 updateActiveImage(currentIdx + 1);
             });
@@ -317,13 +376,29 @@ document.addEventListener("DOMContentLoaded", () => {
         dots.forEach(dot => {
             dot.addEventListener('click', (e) => {
                 e.preventDefault();
-                e.stopPropagation(); // Evita el giro 3D y el clic en la imagen
+                e.stopPropagation();
                 let targetIdx = parseInt(dot.getAttribute('data-index') || 0);
                 updateActiveImage(targetIdx);
             });
         });
 
-        // 4. Giro 3D al hacer clic en la franja de título inferior o en la cara trasera
+        // 4. Botones dedicados de giro táctil directo (Girar ↻ y Volver ↺)
+        card.querySelectorAll('.flip-hint').forEach(hint => {
+            hint.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isFlipped = card.classList.toggle('is-flipped');
+                if (isFlipped) {
+                    card.querySelectorAll('video').forEach(v => {
+                        v.pause();
+                        v.currentTime = 0;
+                        v.muted = true;
+                    });
+                }
+            });
+        });
+
+        // 5. Giro 3D al hacer clic o tap general en la tarjeta (franja inferior o reverso)
         card.addEventListener('click', (e) => {
             if (e.target.closest('.mini-card-dot') || e.target.closest('.mini-carousel-arrow') || e.target.tagName === 'A' || e.target.closest('a') || e.target.tagName === 'VIDEO' || e.target.closest('video')) {
                 return;
